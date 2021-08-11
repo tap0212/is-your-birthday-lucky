@@ -1,4 +1,13 @@
+# Is your birthday lucky?
+### A fun app 
+![](https://github.com/tap0212/is-your-birthday-lucky/blob/main/demo.gif)
+### Key features
+ - Takes in your birthday and a lucky number 
+ - Play fun animations based on the luckiness of your birthday.
+
+### `Project built using =>`
 # React Typescript Template ⚛️ 🥷
+### by Tapan Awasthi
 ##### `An Enterprise React template which comes with typescript, Global state management, globally uniform styling.🔥🔥`
 ![](https://github.com/tap0212/react-typescript-template/blob/main/rts.png)
 ## TypeScript 

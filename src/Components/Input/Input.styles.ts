@@ -1,3 +1,4 @@
+import { COLORS } from '@/styling/colors';
 import { Input } from 'antd';
 import styled from 'styled-components';
 
@@ -6,8 +7,10 @@ export const StyledInput = styled(Input)`
     width: 100%;
     height: 3rem;
     border-radius: 0.5rem;
+    border: 1px solid ${COLORS.ACCENT};
     &:focus {
       border-radius: 0.5rem;
+      border: 1px solid ${COLORS.ACCENT};
     }
   }
 `;
