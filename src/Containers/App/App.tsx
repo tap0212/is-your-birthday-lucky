@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, RouteComponentProps } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import { ThemeProvider } from 'styled-components';
 
@@ -18,23 +18,23 @@ interface DispatchProps {}
 type Props = StateProps & DispatchProps;
 
 const App: React.FC = (props: Props) => {
-    return (
-        <ThemeProvider theme={THEME}>
-            <Layout.Content>
-                <Header title="The TypeScript React Template" />
-                <Switch>
-                    <Route exact={true} path={'/'} component={Home} />
-                    <Route path="*" exact={true} component={NotFoundPage} />
-                </Switch>
-                <GlobalStyle />
-            </Layout.Content>
-        </ThemeProvider>
-    );
+  return (
+    <ThemeProvider theme={THEME}>
+      <Layout.Content>
+        <Header title="Is your birthday lucky?" />
+        <Switch>
+          <Route exact={true} path={'/'} component={Home} />
+          <Route path="*" exact={true} component={NotFoundPage} />
+        </Switch>
+        <GlobalStyle />
+      </Layout.Content>
+    </ThemeProvider>
+  );
 };
 
 export type Dispatch = (action: Action) => void;
 const mapStateToProps = createStructuredSelector({
-    app: makeSelectApp,
+  app: makeSelectApp,
 });
 const mapDispatchToProps = {};
 const withConnect = connect<StateProps, DispatchProps>(mapStateToProps, mapDispatchToProps);

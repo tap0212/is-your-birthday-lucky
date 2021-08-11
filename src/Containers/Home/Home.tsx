@@ -7,23 +7,23 @@ import { compose } from 'redux';
 import { createStructuredSelector } from 'reselect';
 import { Wrapper } from './Styles';
 interface StateProps {
-    sample: string;
+  sample: string;
 }
 interface DispatchProps {
-    dispatchSetSample: () => void;
+  dispatchSetSample: () => void;
 }
 type Props = RouteComponentProps;
 export type PropsType = StateProps & DispatchProps & Props;
 const Home = (props: PropsType) => {
-    return <Wrapper>Hello!</Wrapper>;
+  return <Wrapper>Hello!</Wrapper>;
 };
 
 const mapStateToProps = createStructuredSelector({
-    home: makeSelectHome,
-    sample: selectSample(),
+  home: makeSelectHome,
+  sample: selectSample(),
 });
 const mapDispatchToProps = {
-    dispatchSetSample: () => HomeCreators.sample(),
+  dispatchSetSample: () => HomeCreators.sample(),
 };
 
 const withConnect = connect<StateProps, DispatchProps, Props>(mapStateToProps, mapDispatchToProps);
